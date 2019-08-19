@@ -95,5 +95,45 @@ $a = array(
     4 => "Tanzania",
     6 => 2
  ),
+ 11 => array(
+    0 => "which country has the highest crime rate",
+    1 => "Libya",
+    2 => "Nigeria",
+    3 => "Congo",
+    4 => "South Africa",
+    6 => 4
+ ),
+ 12 => array(
+    0 => "which city was recently voted the best city in the world",
+    1 => "Nairoba",
+    2 => "Cape town",
+    3 => "Pretoria",
+    4 => "Lagos",
+    6 => 2
+ ),
+ 13 => array(
+    0 => "which country is rated the happiest by the world happiness report",
+    1 => "South Africa",
+    2 => "Nigeria",
+    3 => "Algeria",
+    4 => "Maritius",
+    6 => 4
+ ),
+ 14 => array(
+    0 => "Nelson Mandela was the president of which African country",
+    1 => "Tanzania",
+    2 => "Zimbabwe",
+    3 => "Congo",
+    4 => "South Africa",
+    6 => 4
+ ),
+ 15 => array(
+    0 => "what is the largest dessert in the world",
+    1 => "The Sahara",
+    2 => "Nyiri Desert",
+    3 => "Guban Desert",
+    4 => "Lompoul Desert",
+    6 => 1
+ ),
 </body>
 </html>
