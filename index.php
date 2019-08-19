@@ -135,5 +135,48 @@ $a = array(
     4 => "Lompoul Desert",
     6 => 1
  ),
+ 16 => array(
+    0 => "which country is the biggest contributor to pollution",
+    1 => "South Africa",
+    2 => "Nigeria",
+    3 => "Somalia",
+    4 => "Eqypt",
+    6 => 2
+ ),
+ 17 => array(
+    0 => "which is the hottest country in Africa",
+    1 => "Congo",
+    2 => "Mexico",
+    3 => "Mali",
+    4 => "Libya",
+    6 => 4
+ ),
+ 18 => array(
+    0 => "which African countries have the most big 5 animals",
+    1 => "South Africa",
+    2 => "Namibia",
+    3 => "Botswana",
+    4 => "Congo",
+    6 => 3
+ ),
+ 19 => array(
+    0 => "which is the fastest growing country in Africa",
+    1 => "Egypt",
+    2 => "Nigeria",
+    3 => "South Africa",
+    4 => "Congo",
+    6 => 2
+ ),
+ 20 => array(
+    0 => "which country hosts the second biggest forest in the world",
+    1 => "Congo",
+    2 => "Egypt",
+    3 => "Kenya",
+    4 => "South Africa",
+    6 => 1
+ ),
+ );
+ 
+ $max=20;
 </body>
 </html>
