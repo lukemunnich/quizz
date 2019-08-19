@@ -222,11 +222,7 @@ function Goahead (number){
                         document.percentaje.question.value++
                 }
         }
-        if (number==<?php print $a[$randval2][6] ; ?>){
-                document.question.response.value="Correct"
-        }else{
-                document.question.response.value="Incorrect"
-        }
+      
 }
 // -->
 </SCRIPT>
