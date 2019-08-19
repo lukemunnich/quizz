@@ -178,5 +178,52 @@ $a = array(
  );
  
  $max=20;
+ $question=$_POST["question"] ;
+
+if ($_POST["Randon"]==0){
+        if($randomizequestions =="yes"){$randval = mt_rand(1,$max);}else{$randval=1;}
+        $randval2 = $randval;
+        }else{
+        $randval=$_POST["Randon"];
+        $randval2=$_POST["Randon"] + $question;
+                if ($randval2>$max){
+                $randval2=$randval2-$max;
+                }
+        }
+        
+$ok=$_POST["ok"] ;
+
+if ($question==0){
+        $question=0;
+        $ok=0;
+        $percentaje=0;
+        }else{
+        $percentaje= Round(100*$ok / $question);
+        }
+?>
+
+<HTML><HEAD><TITLE>Multiple Choice Questions:  <?php print $title; ?></TITLE>
+
+<SCRIPT LANGUAGE='JavaScript'>
+<!-- 
+function Goahead (number){
+        if (document.percentaje.response.value==0){
+                if (number==<?php print $a[$randval2][6] ; ?>){
+                        document.percentaje.response.value=1
+                        document.percentaje.question.value++
+                        document.percentaje.ok.value++
+                }else{
+                        document.percentaje.response.value=1
+                        document.percentaje.question.value++
+                }
+        }
+        if (number==<?php print $a[$randval2][6] ; ?>){
+                document.question.response.value="Correct"
+        }else{
+                document.question.response.value="Incorrect"
+        }
+}
+
+</SCRIPT>
 </body>
 </html>
