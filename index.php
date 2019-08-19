@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Africa quizz</title>
+  
 </head>
 <body>
 <?php
@@ -13,7 +14,7 @@ error_reporting(0);
 
 //      CONFIGURATION
 $title = "Afica";
-$address = "index.html";
+$address = "index.php";
 $randomizequestions ="yes"; // set up as "no" to show questions without randomization
 //    END CONFIGURATION
 
@@ -205,12 +206,13 @@ if ($question==0){
         }else{
         $percentaje= Round(100*$ok / $question);
         }
+        
 ?>
 
 <HTML><HEAD><TITLE>Multiple Choice Questions:  <?php print $title; ?></TITLE>
 
 <SCRIPT LANGUAGE='JavaScript'>
-<!-- 
+ 
 function Goahead (number){
         if (document.percentaje.response.value==0){
                 if (number==<?php print $a[$randval2][6] ; ?>){
@@ -223,12 +225,17 @@ function Goahead (number){
                 }
         }
       
+
+if (number==<?php print $a[$randval2][6] ; ?>){
+                document.question.response.value="accepted"
+        }else{
+                document.question.response.value="accepted"
+        }
 }
-// -->
 </SCRIPT>
 
 </HEAD>
-<BODY BGCOLOR=FFFFFF>
+
 
 <CENTER>
 <H1><?php print "$title"; ?></H1>
@@ -272,8 +279,8 @@ function Goahead (number){
 ?>
 <TR><TD ALIGN=Center>
 The Quiz has finished
-<BR>Percentaje of correct responses: <?php print $percentaje ; ?> %
-<p><A HREF="<?php print $address; ?>">Home Page</a>
+<BR>Percentage of correct responses: <?php print $percentaje ; ?> %
+<p><A href="index.php">Home Page</a>
 
 <?php } ?>
 
@@ -281,5 +288,6 @@ The Quiz has finished
 </TABLE>
 
 </CENTER>
+<link rel="stylesheet" href="css/style.css">
 </body>
 </html>
