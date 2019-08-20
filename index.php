@@ -219,7 +219,8 @@ function Goahead (number){
                         document.percentaje.response.value=1
                         document.percentaje.question.value++
                         document.percentaje.ok.value++
-                }else{
+                }
+                else{
                         document.percentaje.response.value=1
                         document.percentaje.question.value++
                 }
@@ -275,18 +276,26 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 
 <br><img id="blueimage" src="images/africa.jpg" alt="Africa">
 
-
 <?php
-}else{
+}if($percentaje < 25 ){
 ?>
 <TR><TD ALIGN=Center>
-The Quiz has finished
+The Quiz has finished thank you
+<BR>Percentage of correct responses: <?php print $percentaje ; ?> %
+<p><A href="index.php">Home Page</a>
+<?php } else{
+?>
+<TR><TD ALIGN=Center>
+The Quiz has finished work harder
 <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
 <p><A href="index.php">Home Page</a>
 <?php } ?>
-
 </TD></TR>
 </TABLE>
+</TD></TR>
+</TABLE>
+
+
 
 
 
@@ -294,4 +303,5 @@ The Quiz has finished
 </CENTER>
 <link rel="stylesheet" href="css/style.css">
 </body>
+?>
 </html>
