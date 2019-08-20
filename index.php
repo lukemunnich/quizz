@@ -277,10 +277,10 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 <br><img id="blueimage" src="images/africa.jpg" alt="Africa">
 
 <?php
-}if($percentaje < 25 ){
+}if($percentaje <= 10  ){
 ?>
 <TR><TD ALIGN=Center>
-The Quiz has finished thank you
+The Quiz has finished  study much harder next time
 <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
 <p><A href="index.php">Home Page</a>
 <?php } else{
