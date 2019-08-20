@@ -13,7 +13,7 @@ error_reporting(0);
 
 
 //      CONFIGURATION
-$title = "Afica";
+$title = "Africa quizz";
 $address = "index.php";
 $randomizequestions ="yes"; // set up as "no" to show questions without randomization
 //    END CONFIGURATION
@@ -271,8 +271,10 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 <BR>     <INPUT TYPE=radio NAME="option" VALUE="5"  onClick=" Goahead (5);"><?php print $a[$randval2][5] ; } ?>
 <BR>     <input type=text name=response size=8>
 
-
 </FORM>
+
+<br><img id="blueimage" src="images/africa.jpg" alt="Africa">
+
 
 <?php
 }else{
@@ -281,11 +283,13 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 The Quiz has finished
 <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
 <p><A href="index.php">Home Page</a>
-
 <?php } ?>
 
 </TD></TR>
 </TABLE>
+
+
+
 
 </CENTER>
 <link rel="stylesheet" href="css/style.css">

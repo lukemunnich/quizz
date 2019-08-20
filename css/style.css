@@ -1,3 +1,8 @@
+
 body{
-  background-color: blue;
+    background-color: rgb(238, 179, 92);
+}
+#blueimage{
+    width:100%;
+    height:100%;
 }
