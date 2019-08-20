@@ -277,13 +277,24 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 <br><img id="blueimage" src="images/africa.jpg" alt="Africa">
 
 <?php
-}if($percentaje <= 10  ){
+}if($percentaje <= 40 ){
 ?>
 <TR><TD ALIGN=Center>
-The Quiz has finished  study much harder next time
+The Quiz has finished 
+<br> study much harder next time
 <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
 <p><A href="index.php">Home Page</a>
-<?php } else{
+<?php } 
+else if($percentaje >= 41 &&  $percentaje <=70){
+    ?>
+    <TR><TD ALIGN=Center>
+    The Quiz has finished
+    <br>well done keep going
+    <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
+    <p><A href="index.php">Home Page</a>
+    <?php } 
+
+else{
 ?>
 <TR><TD ALIGN=Center>
 The Quiz has finished work harder
@@ -303,5 +314,5 @@ The Quiz has finished work harder
 </CENTER>
 <link rel="stylesheet" href="css/style.css">
 </body>
-?>
+
 </html>
