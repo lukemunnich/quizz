@@ -1,7 +1,8 @@
-
+/* style the body */
 body{
     background-color: rgb(238, 179, 92);
 }
+/* styling the image */
 #blueimage{
     width:100%;
     height:100%;

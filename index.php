@@ -11,14 +11,12 @@
 <?php
 error_reporting(0);
 
-
 //      CONFIGURATION
 $title = "Africa quizz";
 $address = "index.php";
-$randomizequestions ="yes"; // set up as "no" to show questions without randomization
-//    END CONFIGURATION
+$randomizequestions ="yes"; 
 
-
+// creating question arrays
 $a = array(
 1 => array(
    0 => "what is Africas biggest economy",
@@ -181,11 +179,12 @@ $a = array(
    6 => 1
 ),
 );
-
+// setting max questions
 $max=20;
 
 $question=$_POST["question"] ;
 
+// setting up count function
 if ($_POST["Randon"]==0){
         if($randomizequestions =="yes"){$randval = mt_rand(1,$max);}else{$randval=1;}
         $randval2 = $randval;
@@ -211,6 +210,7 @@ if ($question==0){
 
 <HTML><HEAD><TITLE>Multiple Choice Questions:  <?php print $title; ?></TITLE>
 
+<!-- javascript to change to the next question when next is clicked -->
 <SCRIPT LANGUAGE='JavaScript'>
  
 function Goahead (number){
@@ -237,7 +237,7 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 
 </HEAD>
 
-
+<!-- setting display settings -->
 <CENTER>
 <H1><?php print "$title"; ?></H1>
 <TABLE BORDER=0 CELLSPACING=5 WIDTH=500>
@@ -257,61 +257,63 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 </FORM>
 <HR>
 </TD></TR>
-
 <TR><TD>
+
+<!-- creating post method -->
 <FORM METHOD=POST NAME="question" ACTION="">
 <?php print "<b>".$a[$randval2][0]."</b>"; ?>
  
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="1"  onClick=" Goahead (1);"><?php print $a[$randval2][1] ; ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="2"  onClick=" Goahead (2);"><?php print $a[$randval2][2] ; ?>
+<BR>  <form>   <INPUT TYPE=radio NAME="option" VALUE="1"  onClick=" Goahead (1);"><?php print $a[$randval2][1] ; ?>
+<BR>  <form>   <INPUT TYPE=radio NAME="option" VALUE="2"  onClick=" Goahead (2);"><?php print $a[$randval2][2] ; ?>
 <?php if ($a[$randval2][3]!=""){ ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="3"  onClick=" Goahead (3);"><?php print $a[$randval2][3] ; } ?>
+<BR>   <form>  <INPUT TYPE=radio NAME="option" VALUE="3"  onClick=" Goahead (3);"><?php print $a[$randval2][3] ; } ?>
 <?php if ($a[$randval2][4]!=""){ ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="4"  onClick=" Goahead (4);"><?php print $a[$randval2][4] ; } ?>
+<BR>  <form>   <INPUT TYPE=radio NAME="option" VALUE="4"  onClick=" Goahead (4);"><?php print $a[$randval2][4] ; } ?>
 <?php if ($a[$randval2][5]!=""){ ?>
-<BR>     <INPUT TYPE=radio NAME="option" VALUE="5"  onClick=" Goahead (5);"><?php print $a[$randval2][5] ; } ?>
-<BR>     <input type=text name=response size=8>
+<BR>  <form>   <INPUT TYPE=radio NAME="option" VALUE="5"  onClick=" Goahead (5);"><?php print $a[$randval2][5] ; } ?>
+<BR>  <form>   <input type=text name=response size=8>
 
 </FORM>
 
+<!-- adding image -->
 <br><img id="blueimage" src="images/africa.jpg" alt="Africa">
 
+
+<!-- creating messages based on the percentege of answers correct -->
 <?php
-}if($percentaje <= 40 ){
+}else if($percentaje <= 40 ){
 ?>
-<TR><TD ALIGN=Center>
-The Quiz has finished 
-<br> study much harder next time
-<BR>Percentage of correct responses: <?php print $percentaje ; ?> %
-<p><A href="index.php">Home Page</a>
-<?php } 
-else if($percentaje >= 41 &&  $percentaje <=70){
-    ?>
-    <TR><TD ALIGN=Center>
-    The Quiz has finished
-    <br>well done keep going
+  <TR><TD ALIGN=Center>
+   The Quiz has finished 
+   <br> study much harder next time
     <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
-    <p><A href="index.php">Home Page</a>
-    <?php } 
+     <p><A href="index.php">Home Page</a>
+      <?php } 
+else if($percentaje >= 41 &&  $percentaje <=70){
+?>
+  <TR><TD ALIGN=Center>
+   The Quiz has finished
+   <br>well done keep going
+    <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
+     <p><A href="index.php">Home Page</a>
+      <?php } 
 
 else{
 ?>
-<TR><TD ALIGN=Center>
-The Quiz has finished work harder
-<BR>Percentage of correct responses: <?php print $percentaje ; ?> %
-<p><A href="index.php">Home Page</a>
-<?php } ?>
-</TD></TR>
-</TABLE>
-</TD></TR>
-</TABLE>
+  <TR><TD ALIGN=Center>
+   The Quiz has finished work harder
+   <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
+    <p><A href="index.php">Home Page</a>
+      <?php } ?>
 
-
-
-
-
+        </TD></TR>
+        </TABLE>
+        </TD></TR>
+        </TABLE>
 
 </CENTER>
+
+<!-- linking css file -->
 <link rel="stylesheet" href="css/style.css">
 </body>
 
