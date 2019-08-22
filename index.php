@@ -208,7 +208,7 @@ if ($question==0){
         
 ?>
 
-<HTML><HEAD><TITLE>Multiple Choice Questions:  <?php print $title; ?></TITLE>
+
 
 <!-- javascript to change to the next question when next is clicked -->
 <SCRIPT LANGUAGE='JavaScript'>
@@ -281,13 +281,14 @@ if (number==<?php print $a[$randval2][6] ; ?>){
 
 <!-- creating messages based on the percentege of answers correct -->
 <?php
+
 }else if($percentaje <= 40 ){
 ?>
-  <TR><TD ALIGN=Center>
-   The Quiz has finished 
-   <br> study much harder next time
-    <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
-     <p><A href="index.php">Home Page</a>
+  <TR> <TD ALIGN=Center>
+  <p> The Quiz has finished </p>
+  <p> <br> study much harder next time</p>
+  <p> <BR>Percentage of correct responses: <?php print $percentaje ; ?> %</p>
+  <p>  <A href="index.php">Home Page</a></p>
       <?php } 
 else if($percentaje >= 41 &&  $percentaje <=70){
 ?>
