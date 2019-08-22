@@ -302,7 +302,7 @@ else{
 ?>
   <TR><TD ALIGN=Center>
    The Quiz has finished 
-   <br>work harder
+   <br>great work your a top student
    <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
     <p><A href="index.php">Home Page</a>
       <?php } ?>
