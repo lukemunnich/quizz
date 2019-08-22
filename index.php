@@ -301,7 +301,8 @@ else if($percentaje >= 41 &&  $percentaje <=70){
 else{
 ?>
   <TR><TD ALIGN=Center>
-   The Quiz has finished work harder
+   The Quiz has finished 
+   <br>work harder
    <BR>Percentage of correct responses: <?php print $percentaje ; ?> %
     <p><A href="index.php">Home Page</a>
       <?php } ?>
